@@ -20,9 +20,56 @@ Styling: Tailwind CSS, Naive UI
 Image Manipulation: Konva.js
 DICOM Parsing: dicom-parser
 Containerization: Docker
-Installation & Setup
+Installation & SetupInstall dependencies:
+
+bash
+Copy code
+npm install
+Start the development server:
+
+bash
+Copy code
+npm run dev
+Visit http://localhost:3000 in your browser.
+
+Deployment
+Docker Deployment
+Build and run the Docker container:
+bash
+Copy code
+docker-compose up
+Access the app at http://localhost:3000.
+Hosted App
+The application is deployed at:
+Live App Link
+
+Directory Structure
+php
+Copy code
+medical-image-app/
+├── components/          # Reusable Vue components
+├── pages/               # Nuxt pages for routing
+├── public/              # Static assets
+├── assets/              # Styling (Tailwind CSS)
+├── composables/         # Utility logic
+├── Dockerfile           # Docker configuration
+├── docker-compose.yml   # Docker Compose file
+├── nuxt.config.ts       # Nuxt configuration
+├── package.json         # Dependencies and scripts
+└── README.md            # Project documentation
+Challenges & Solutions
+DICOM Metadata Parsing:
+Utilized dicom-parser to extract and display metadata such as patient name and pixel spacing.
+Real-World Measurements:
+Implemented pixel-to-mm conversion using metadata fields for accurate scaling.
+Future Improvements
+Add support for more image formats (e.g., TIFF, JPEG2000).
+Integrate AI-powered annotation tools for enhanced diagnostics.
+Include advanced 3D imaging features.
 Prerequisites
 Node.js v16+ installed.
 Docker (optional, for containerized deployment).
 Steps to Run Locally
 Clone the repository:
+https://github.com/aj240917/medical-image-app.git
+
